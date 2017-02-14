@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle id="com.bmstu.coursework.powerloom" version="1.0.0.qualifier">
+      <category name="com.bmstu.coursework.powerloom.site"/>
+   </bundle>
+   <bundle id="com.bmstu.coursework.powerloom.ds.host" version="1.0.0.qualifier">
+      <category name="com.bmstu.coursework.powerloom.site"/>
+   </bundle>
+   <bundle id="com.bmstu.coursework.powerloom.model" version="1.0.0.qualifier">
+      <category name="com.bmstu.coursework.powerloom.site"/>
+   </bundle>
+   <category-def name="com.bmstu.coursework.powerloom.site" label="Powerloom"/>
+</site>

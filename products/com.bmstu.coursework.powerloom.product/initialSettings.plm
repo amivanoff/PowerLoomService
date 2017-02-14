@@ -1,0 +1,27 @@
+(defmodule "BMSTU"
+	:documentation "Simple module"
+	:includes ("PL-KERNEL-KB")
+)
+
+(in-module "BMSTU")
+
+(DEFRELATION hasTitle ((?class Class) (?text STRING)))
+
+(DEFCONCEPT Person (?p)
+	:documentation "Simple person")
+(assert (Person Sam))
+(assert (Person Tom))
+(assert (Person Joe))
+(assert (Person John))
+
+(DEFRELATION happy ((?p Person))
+	:documentation "True if ?p is happy")
+(assert (happy Tom))
+(assert (not (happy Joe)))
+
+(DEFRELATION loves ((?p Person) (?o Person)))
+(assert (loves Tom Joe))
+(assert (loves John Tom))
+
+(DEFRELATION lovers ((?p Person) (?o Person)) :<=> (AND (loves ?p ?o) (loves ?o ?p)))
+
